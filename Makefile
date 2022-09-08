@@ -1,0 +1,16 @@
+TARGET    = hirocc
+OBJS      = main.o
+
+CXX       = clang++
+CXXFLAGS  = -O3 -Wall
+LDFLAGS   = -lm
+
+${TARGET}: ${OBJS}
+	${CXX} ${OBJS} -o $@
+
+.PHONY: all clean
+
+all: ${TARGET}
+
+clean:
+	${RM} ${TARGET} ${OBJS}
