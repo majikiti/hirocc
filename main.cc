@@ -50,7 +50,7 @@ auto main(int argc, char* argv[]) -> int {
 
   if(!paths.size()) {
     help();
-    return 0;
+    return 1;
   }
 
   size_t errn = 0;
@@ -74,6 +74,7 @@ auto main(int argc, char* argv[]) -> int {
 
   if(errn) {
     cerr << "There are "s << errn << " errors."s << endl;
+    return 1;
   }
   cout << "done"s << endl;
 }
