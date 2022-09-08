@@ -2,7 +2,7 @@ TARGET    = hirocc
 OBJS      = main.o
 
 CXX       = clang++
-CXXFLAGS  = -O3 -Wall
+CXXFLAGS  = -std=c++20 -O3 -Wall
 LDFLAGS   = -lm
 
 ${TARGET}: ${OBJS}
